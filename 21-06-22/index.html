@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        h3 {
+            background-color: blue;
+            color: white;
+            position: relative;
+            animation: HEAD 2s infinite;
+        }
+        @keyframes HEAD {
+            0%{
+                /* transform: rotate(-30deg); */
+            }
+            70%{
+                transform: rotate(30deg);
+            }
+            90%{
+                transform: rotate(-30deg);
+
+            }
+        }
+
+        h3::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 5%;
+            background-color: brown;
+            border-radius: 50%;
+            top: -20px;
+            animation: Move 2s infinite;
+        }
+
+        h3:hover:before {
+            content: '';
+            position: absolute;
+            background-color: yellow;
+            transition: all 2s linear;
+
+        }
+
+        @keyframes Move {
+            0% {
+                margin-left: 0%;
+
+            }
+            20%{
+                /* margin-left: 40%; */
+            }
+            60%{
+                margin-left: 80%;
+            }
+        }
+    </style>
+    <h3>
+        Hello World
+    </h3>
+</body>
+
+</html>

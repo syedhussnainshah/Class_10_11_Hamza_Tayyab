@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .Head {
+            background-color: blue;
+            transition: all 1s linear;
+            /* width: 20%; */
+            animation: slider 5s infinite;
+
+
+        }
+
+        /* .Head:hover {
+            background-color: brown;
+            color: white;
+            padding: 10px;
+            transition: all 1s linear;
+            transform: rotate(360deg);
+            height: 50vh;
+        } */
+        @keyframes slider {
+            0% {
+                transform: rotate(-20deg);
+
+            }
+
+            50% {
+                transform: rotate(20deg);
+
+            }
+
+            100% {
+                transform: rotate(-20deg);
+
+            }
+        }
+    </style>
+    <h3 class="Head">Hello Web</h3>
+</body>
+
+</html>
