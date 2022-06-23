@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .head{
+            background-color: blue;
+            height: 50vh;
+            width: 100%;
+            position: relative;
+            background-image: url('summerpack.crop_605x454_203,0.preview.jpg');
+            transition: all 2s linear;
+
+
+        }
+        .head:hover::before{
+            content: '';
+            position: absolute;
+            height: 0%;
+            width: 100%;
+            background-color: brown;
+            left: 0;
+            top: 0;
+            border-bottom-left-radius: 50%;
+
+        }
+        .head:hover::after{
+            content: '';
+            position: absolute;
+            height: 0%;
+            width: 100%;
+            background-color: yellow;
+            left: 0;
+            bottom: 0;
+            transition: all 2s linear;
+            border-top-left-radius: 50%;
+
+        }
+        .head::before{
+            content: '';
+            position: absolute;
+            height: 50%;
+            width: 100%;
+            background-color: brown;
+            left: 0;
+            top: 0;
+            transition: all 2s linear;
+
+        }
+        .head::after{
+            content: '';
+            position: absolute;
+            height: 50%;
+            width: 100%;
+            background-color: yellow;
+            left: 0;
+            bottom: 0;
+            transition: all 2s linear;
+
+        }
+    </style>
+<div class="head">
+hello
+</div>
+</body>
+
+</html>
