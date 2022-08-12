@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="d-flex justify-content-between align-items-center bg-info list-unstyled p-2">
+                    <li class="items bg-warning p-3">All</li>
+                    <li class="items bg-warning p-3">Laptop</li>
+                    <li class="items bg-warning p-3">Bag</li>
+                    <li class="items bg-warning p-3">Bike</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" data-filter="Bag">
+                <img src="images/bag.jpg" width="20%" alt="">
+            </div>
+            <div class="col-md-3" data-filter="Bike">
+                <img src="images/bike.jpg" width="20%" alt="">
+            </div>
+            <div class="col-md-3" data-filter="Bike">
+                <img src="images/bike1.jpg" width="20%" alt="">
+            </div>
+            <div class="col-md-3" data-filter="Laptop">
+                <img src="images/laptop.jpg" width="20%" alt="">
+            </div>
+            <div class="col-md-3" data-filter="Laptop">
+                <img src="images/laptop1.jpg" width="20%" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        let li = document.getElementsByClassName("items");
+        for (let a = 0; a < li.length; a++) {
+            li[a].addEventListener('click', function () {
+                for (let k = 0; k < li.length; k++) {
+                    li[k].classList.remove("bg-success");
+                    li[k].classList.add("bg-warning");
+
+
+                }
+                li[a].classList.remove("bg-warning");
+                li[a].classList.add("bg-success");
+                let filitem = li[a].innerHTML
+                console.log(li[a]);
+                let img = document.getElementsByClassName('col-md-3');
+                for (let s = 0; s < img.length; s++) {
+
+                    let filter = img[s].getAttribute('data-filter');
+                    img[s].style.display = "none";
+                    if (filitem == 'All') {
+                        img[s].style.display = "block";
+                    }
+                    if (filitem == filter) {
+                        img[s].style.display = "block";
+                    }
+
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
